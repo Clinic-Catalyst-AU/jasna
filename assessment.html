@@ -113,10 +113,9 @@ footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-t
   </section>
 
   <section id="s6" hidden>
-    <div class="step">Your result</div>
-    <h2 id="rTitle">Here is what Jasna would look at first.</h2>
-    <div class="result"><p id="rBody"></p></div>
-    <p>Pop your details in and your skin plan lands in your inbox straight away: three things you can do for your skin today, and your invitation to book your consultation with Jasna.</p>
+    <div class="step">Last step</div>
+    <h2 id="rTitle">Submit your details for Jasna's best hacks to support your skin.</h2>
+    <p>Your plan lands in your inbox and your texts straight away: three things you can do for your skin at home right now, what Jasna would look at first, and your invitation to book your consultation.</p>
     <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
     <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
     <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
@@ -126,8 +125,9 @@ footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-t
 
   <section id="s7" hidden>
     <div class="step">Thank you</div>
-    <h2>Check your inbox. Your plan is on its way.</h2>
-    <p class="lead">Three things you can do today are in your email now, with your invitation to book. Everyone starts with a consultation with Jasna at the clinic in Milton. It is complimentary, and it takes as long as it takes.</p>
+    <h2>Check your texts and your inbox.</h2>
+    <div class="result"><p id="rBody"></p></div>
+    <p class="lead">Three things you can do for your skin at home today have just gone to you by text and email, with your invitation to book. Everyone starts with a consultation with Jasna at the clinic in Milton. It is complimentary, and it takes as long as it takes.</p>
     <a class="btn" href="book.html">Book a consultation with Jasna</a>
     <p class="note">Park Road, Milton &middot; 26 years of looking at skin first</p>
   </section>
@@ -141,12 +141,14 @@ function pick(k,v){a[k]=v;const order={concern:2,length:3,tried:4,why:5,when:6};
 function render(){
   const c=a.concern;
   const map={
-    leak:"Pigmentation that keeps coming back usually means nobody has worked out what is driving it. Before any laser goes near it, Jasna looks at the type of pigment, the depth, your history and your sun habits, then builds a sequence. Sometimes that is Q-Switch and a targeted facial protocol first, sometimes something else. The point is the plan, not the machine.",
-    core:"Skin that has changed with age needs a plan, not a facial. Texture, colour, lines and firmness are usually treated in stages over months, with the right technology at each stage and the homecare to hold it. Jasna will tell you what is realistic and what is not.",
+    leak:"Pigmentation that keeps coming back usually means nobody has worked out what is driving it. Before any laser goes near it, Jasna looks at the type of pigment, the depth, your history and your sun habits, then builds a sequence. Sometimes that is Q-Switch and a targeted facial protocol first, sometimes something else. The point is the plan.",
+    core:"Skin that has changed with age needs a staged plan. Texture, colour, lines and firmness are usually treated in stages over months, with the right technology at each stage and the homecare to hold it. Jasna will tell you what is realistic and what is not.",
     meno:"Queensland sun damage responds well to a staged Skin Restoration Plan across face and neck. The first step is a proper look at what is there: capillaries, pigment, texture, laxity. Then the order of treatments that gets you the most back.",
     skin:"Scarring and texture take patience and the right combination, never one session. Jasna will assess the type of scarring and tell you honestly what is achievable and how long it takes.",
     energy:"You are not alone. Most people have spent years buying products one at a time without anyone looking at the whole picture. That is exactly what the consultation is for, and it is where your prescribed routine comes from."
   };
+  const labels={leak:"your pigmentation",core:"your changing skin",meno:"your sun damage",skin:"your scarring and texture",energy:"your skin routine"};
+  document.getElementById('rTitle').textContent="Submit your details for Jasna's best hacks to support "+(labels[c]||"your skin")+".";
   document.getElementById('rBody').textContent=map[c]||map.leak;
   if(a.tried==='gp')document.getElementById('rBody').textContent+=" You mentioned prescriptions were offered. Plenty of people would rather improve the skin itself, and that is exactly Jasna's work.";
 }
