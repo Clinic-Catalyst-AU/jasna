@@ -31,12 +31,24 @@ nav .cta{background:var(--taupe);color:var(--cream);padding:11px 20px}
 header.hero{position:relative;background:var(--taupe);color:var(--cream);overflow:hidden}
 header.hero .bg{position:absolute;inset:0;background:url('assets/hero-laser.jpg') center 30%/cover no-repeat;opacity:.55;filter:sepia(.35) saturate(.7)}
 header.hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(84,66,58,.96) 0%,rgba(84,66,58,.75) 55%,rgba(84,66,58,.35) 100%)}
-header.hero .wrap{position:relative;z-index:2;padding:110px 28px 120px;max-width:1180px}
-header.hero .mono{height:92px;margin-bottom:26px;opacity:.95}
-header.hero h1{font-size:clamp(30px,4.6vw,54px);line-height:1.2;max-width:12ch;color:var(--cream)}
+header.hero .wrap{position:relative;z-index:2;padding:90px 28px 90px;max-width:1180px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media (max-width:900px){header.hero .wrap{grid-template-columns:1fr;gap:40px}}
+.hform{background:rgba(244,241,236,.96);color:var(--ink);padding:34px 32px;border:1px solid rgba(107,86,71,.2);box-shadow:0 30px 70px rgba(43,35,32,.35)}
+.hform .k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--greige);margin-bottom:8px}
+.hform h3{font-family:'Cinzel',serif;font-size:22px;color:var(--taupe);margin-bottom:6px;letter-spacing:.04em}
+.hform p{font-size:13.5px;color:#4A3F39;margin-bottom:18px}
+.hform label{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--greige);margin:10px 0 5px}
+.hform input,.hform select,.hform textarea{width:100%;padding:12px 14px;border:1px solid var(--cream-2);background:var(--white);font-family:'Montserrat',sans-serif;font-size:14px;color:var(--ink)}
+.hform textarea{min-height:76px;resize:vertical}
+.hform .btn{width:100%;text-align:center;margin-top:16px;padding:15px 20px}
+.hform .fine{font-size:11px;color:var(--greige);margin:12px 0 0;line-height:1.5}
+.hform .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.hform .row{grid-template-columns:1fr}}
+header.hero .mono{height:80px;margin-bottom:22px;opacity:.95}
+header.hero h1{font-size:clamp(28px,4vw,48px);line-height:1.2;max-width:14ch;color:var(--cream)}
 header.hero .tag{font-size:clamp(15px,1.6vw,19px);max-width:52ch;margin:26px 0 34px;color:rgba(244,241,236,.88)}
 header.hero .eyebrow{color:rgba(244,241,236,.7)}
-.pillars{display:flex;gap:0;border-top:1px solid rgba(244,241,236,.25);margin-top:60px;max-width:640px}
+.pillars{display:flex;gap:0;border-top:1px solid rgba(244,241,236,.25);margin-top:40px;max-width:560px}
 .pillars div{flex:1;padding:18px 0 0;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,241,236,.8);border-right:1px solid rgba(244,241,236,.25);text-align:center}
 .pillars div:last-child{border-right:none}
 section{padding:96px 0}
@@ -115,12 +127,26 @@ footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding
 <header class="hero" id="top">
   <div class="bg"></div><div class="scrim"></div>
   <div class="wrap">
+    <div>
     <img class="mono" src="assets/logo-primary-white.png" alt="Jasna Skin Results">
     <div class="eyebrow">Skin and laser for women 50+ &middot; Brisbane</div>
     <h1>Tell me about your skin.</h1>
     <p class="tag">Twenty-six years of looking at skin, not machines. One consultation, as long as it takes, then a plan built around you: your skin, your history, what you have tried and what you are prepared to do.</p>
-    <a class="btn" href="#consult">Start with a consultation</a>
     <div class="pillars"><div>Results driven</div><div>Confidence</div><div>Skin health</div><div>You</div></div>
+    </div>
+    <div class="hform" id="hero-form">
+      <div class="k">Free skin assessment</div>
+      <h3>Tell me about your skin.</h3>
+      <p>A few lines is enough. Jasna reads every one herself and comes back to you with what she would look at first, and a time to talk.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=font-size:15px;color:#4A3F39;padding:20px 0>Thank you. Jasna will read this today and text you to find a time.</p>'">
+        <div class="row"><div><label>First name</label><input type="text" placeholder="Your first name" required></div><div><label>Mobile</label><input type="tel" placeholder="04.." required></div></div>
+        <label>Email</label><input type="email" placeholder="you@email.com">
+        <label>What is bothering you most?</label><select><option>Pigmentation that keeps coming back</option><option>Mature skin, lines, texture</option><option>Sun damage, skin restoration</option><option>Scarring or rough texture</option><option>Acne</option><option>Not sure, that is why I am here</option></select>
+        <label>Tell me about your skin</label><textarea placeholder="What you have noticed, what you have tried, how long it has been going on"></textarea>
+        <button class="btn" type="submit">Send to Jasna</button>
+        <p class="fine">No specials, no sales sequence. Free consultation, as long as it takes. By sending you agree to hear from Jasna by text and email.</p>
+      </form>
+    </div>
   </div>
 </header>
 
