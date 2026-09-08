@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Jasna Skin Results - Tell me about your skin</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blush:#A79A8F;--blush-dark:#6B5647;--cream:#F4F1EC;--cream-2:#EAE4DC;--forest:#6B5647;--ink:#2B2320;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+header{padding:26px 24px;text-align:center;border-bottom:1px solid rgba(62,82,73,.12)}
+header .brand{font-family:'Cinzel',serif;font-size:26px;letter-spacing:.18em;text-transform:uppercase;color:var(--forest)}
+header .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blush-dark);margin-top:6px}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 20px}
+.card{background:var(--white);width:100%;max-width:640px;padding:44px 40px;border:1px solid rgba(62,82,73,.1);box-shadow:0 20px 60px rgba(62,82,73,.08)}
+.progress{height:4px;background:var(--cream-2);margin-bottom:28px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--blush);transition:width .4s ease}
+.step{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blush-dark);margin-bottom:12px}
+h1,h2{font-family:'Cinzel',serif;font-weight:500;color:var(--forest);line-height:1.15}
+h1{font-size:40px;margin-bottom:14px}
+h2{font-size:32px;margin-bottom:22px}
+p{font-size:15px;line-height:1.7;color:#4A4D4E}
+.lead{margin-bottom:28px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;background:var(--cream);border:1px solid rgba(62,82,73,.12);padding:16px 18px;font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all .15s}
+.opt:hover{border-color:var(--blush);background:var(--cream-2);transform:translateX(3px)}
+.btn{display:inline-block;background:var(--forest);color:#fff;border:none;padding:16px 34px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;margin-top:8px}
+.btn:hover{background:#2F4038}
+.btn.blush{background:var(--blush);color:var(--forest)}
+label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);margin:14px 0 6px}
+input{width:100%;padding:14px 16px;border:1px solid rgba(62,82,73,.2);background:var(--cream);font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink)}
+input:focus{outline:none;border-color:var(--blush)}
+.back{background:none;border:none;color:#8A8D8E;font-size:12px;letter-spacing:.1em;cursor:pointer;margin-top:18px;font-family:'Montserrat',sans-serif}
+.result{border-left:3px solid var(--blush);padding:14px 18px;background:var(--cream);margin:18px 0 22px}
+.result p{font-size:15px}
+.note{font-size:13px;color:#6B6E6F;margin-top:18px;line-height:1.6}
+footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A8D8E}
+[hidden]{display:none!important}
+@media (max-width:560px){.card{padding:32px 22px}h1{font-size:32px}h2{font-size:26px}}
+</style>
+</head>
+<body>
+<header><div class="brand">Jasna Skin Results</div><div class="tag">Skin and laser for women 50+ &middot; Milton, Brisbane</div></header>
+<main>
+<div class="card">
+  <div class="progress"><i id="bar"></i></div>
+
+  <section id="s0">
+    <div class="step">60 seconds &middot; Just between us</div>
+    <h1>Tell me about your skin.</h1>
+    <p class="lead">Five quick questions. No judgement, nothing clinical. Jasna reads every one herself and tells you what she would look at first.</p>
+    <button class="btn" onclick="go(1)">Start</button>
+  </section>
+
+  <section id="s1" hidden>
+    <div class="step">1 of 5</div>
+    <h2>Which of these sounds most like your skin right now?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('concern','leak')">Pigmentation I have spent years trying to fix, and it keeps coming back</button>
+      <button class="opt" onclick="pick('concern','core')">Texture, uneven colour, lines. My skin has changed and I want someone who knows what they are doing</button>
+      <button class="opt" onclick="pick('concern','meno')">Sun damage. Years of Queensland sun and I would like some of it back</button>
+      <button class="opt" onclick="pick('concern','skin')">Scarring or rough texture I have never had properly looked at</button>
+      <button class="opt" onclick="pick('concern','energy')">I have bought skincare for years and still do not understand what my skin needs</button>
+    </div>
+  </section>
+
+  <section id="s2" hidden>
+    <div class="step">2 of 5</div>
+    <h2>How long has it been going on?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('length','new')">A few months</button>
+      <button class="opt" onclick="pick('length','year')">About a year</button>
+      <button class="opt" onclick="pick('length','years')">Years. I have just been living with it</button>
+    </div>
+    <button class="back" onclick="go(1)">&larr; Back</button>
+  </section>
+
+  <section id="s3" hidden>
+    <div class="step">3 of 5</div>
+    <h2>What have you tried so far?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('tried','nothing')">Nothing yet, I did not know where to start</button>
+      <button class="opt" onclick="pick('tried','exercises')">Treatments at a few different clinics, on and off</button>
+      <button class="opt" onclick="pick('tried','gp')">Talked to my GP and was offered prescription creams or tablets</button>
+      <button class="opt" onclick="pick('tried','products')">A lot of products, without really understanding my skin</button>
+    </div>
+    <button class="back" onclick="go(2)">&larr; Back</button>
+  </section>
+
+  <section id="s4" hidden>
+    <div class="step">4 of 5</div>
+    <h2>If this were sorted, what would change?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('why','confidence')">I would stop covering it with makeup every morning</button>
+      <button class="opt" onclick="pick('why','active')">I would finally understand my own skin</button>
+      <button class="opt" onclick="pick('why','intimacy')">I would stop spending money on things that do not work</button>
+      <button class="opt" onclick="pick('why','mirror')">I would like what I see in the mirror</button>
+    </div>
+    <button class="back" onclick="go(3)">&larr; Back</button>
+  </section>
+
+  <section id="s5" hidden>
+    <div class="step">5 of 5</div>
+    <h2>When would you like to do something about it?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('when','now')">As soon as possible</button>
+      <button class="opt" onclick="pick('when','month')">In the next month or so</button>
+      <button class="opt" onclick="pick('when','looking')">Just finding out what is possible for now</button>
+    </div>
+    <button class="back" onclick="go(4)">&larr; Back</button>
+  </section>
+
+  <section id="s6" hidden>
+    <div class="step">Your result</div>
+    <h2 id="rTitle">Here is what Jasna would look at first.</h2>
+    <div class="result"><p id="rBody"></p></div>
+    <p>Pop your details below and Jasna will send you a short personal note, plus the next step. No specials, no sales sequence, nothing you cannot opt out of.</p>
+    <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
+    <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
+    <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
+    <button class="btn blush" onclick="submitLead()">Send to Jasna</button>
+    <p class="note">By sending, you agree to hear from Jasna Skin Results by text and email. Unsubscribe any time.</p>
+  </section>
+
+  <section id="s7" hidden>
+    <div class="step">Thank you</div>
+    <h2>Jasna has it. Here is the next step.</h2>
+    <p class="lead">Everyone starts with a consultation with Jasna at the clinic in Milton. It is free, and it takes as long as it takes. Jasna will text you to find a time, because she keeps the diary herself.</p>
+    <a class="btn" href="sms:+61422346099" target="_blank">Text Jasna to book</a>
+    <p class="note">Park Road, Milton &middot; 26 years of looking at skin first</p>
+  </section>
+</div>
+</main>
+<footer>Demo built by Clinic Catalyst for Jasna Skin Results</footer>
+<script>
+const a={};
+function go(n){for(let i=0;i<=7;i++){const s=document.getElementById('s'+i);if(s)s.hidden=(i!==n)}document.getElementById('bar').style.width=Math.min(100,Math.round((n/6)*100))+'%';window.scrollTo({top:0,behavior:'smooth'})}
+function pick(k,v){a[k]=v;const order={concern:2,length:3,tried:4,why:5,when:6};if(k==='when')render();go(order[k])}
+function render(){
+  const c=a.concern;
+  const map={
+    leak:"Pigmentation that keeps coming back usually means nobody has worked out what is driving it. Before any laser goes near it, Jasna looks at the type of pigment, the depth, your history and your sun habits, then builds a sequence. Sometimes that is Q-Switch and a targeted facial protocol first, sometimes something else. The point is the plan, not the machine.",
+    core:"Skin that has changed with age needs a plan, not a facial. Texture, colour, lines and firmness are usually treated in stages over months, with the right technology at each stage and the homecare to hold it. Jasna will tell you what is realistic and what is not.",
+    meno:"Queensland sun damage responds well to a staged Skin Restoration Plan across face and neck. The first step is a proper look at what is there: capillaries, pigment, texture, laxity. Then the order of treatments that gets you the most back.",
+    skin:"Scarring and texture take patience and the right combination, never one session. Jasna will assess the type of scarring and tell you honestly what is achievable and how long it takes.",
+    energy:"You are not alone. Most people have spent years buying products one at a time without anyone looking at the whole picture. That is exactly what the consultation is for, and it is where your prescribed routine comes from."
+  };
+  document.getElementById('rBody').textContent=map[c]||map.leak;
+  if(a.tried==='gp')document.getElementById('rBody').textContent+=" You mentioned prescriptions were offered. Plenty of people would rather improve the skin itself, and that is exactly Jasna's work.";
+}
+function submitLead(){const fn=document.getElementById('fn').value.trim(),mob=document.getElementById('mob').value.trim();if(!fn||!mob){alert('Just your first name and mobile so Jasna can reach you.');return}console.log('lead',{...a,fn,mob,em:document.getElementById('em').value});go(7)}
+</script>
+</body>
+</html>
