@@ -165,7 +165,10 @@ section.dark .paras p{color:rgba(244,241,236,.85)}
 .case .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--greige);margin-bottom:8px}
 .case h3{font-size:17px;color:var(--taupe);margin-bottom:8px}
 .case .ba{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
-.case .ba div{aspect-ratio:4/5;background:linear-gradient(160deg,var(--cream),var(--cream-2));display:flex;align-items:flex-end;padding:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.case .ba div{position:relative;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,var(--cream),var(--cream-2));display:flex;align-items:flex-end;padding:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.case .ba div img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.case .ba div span{position:relative;z-index:2;background:rgba(43,35,32,.6);color:#F4F1EC;padding:3px 8px}
+.mocknote{border:1px dashed var(--greige);background:var(--cream);padding:14px 16px;margin:18px 0 4px;font-size:13px;line-height:1.6;color:#4A3F39}
 .case p{font-size:14px;color:#4A3F39}
 [hidden]{display:none!important}
 </style>
@@ -189,12 +192,13 @@ section.dark .paras p{color:rgba(244,241,236,.85)}
     <div class="eyebrow">Private gallery</div>
     <h2>Cosmetic medicine, by concern area.</h2>
     <p class="lead">Every case here is a client of mine, shared with their consent. Results vary from person to person. What is right for you is decided together in your consultation, and only if it is right for you.</p>
+    <div class="mocknote"><strong>Concept note for Jasna.</strong> The four images below are computer-generated placeholders, put here so you can see how the gallery reads. They are not patients and they are not results. Your own consented before and afters replace them before this page goes anywhere near a client.</div>
     <div class="warn">These images relate to prescription-only cosmetic treatments and are provided for information after consultation only. They are not an offer or inducement. Individual results vary. Treatment suitability is determined at consultation.</div>
     <div class="cases">
-      <div class="case"><div class="k">Around the eyes</div><h3>Tired eyes, softened</h3><div class="ba"><div>Before</div><div>After</div></div><p>Consented photo to come. Captioned by concern, with the treatment named only in your consultation.</p></div>
-      <div class="case"><div class="k">Lips and mouth area</div><h3>Lines around the mouth</h3><div class="ba"><div>Before</div><div>After</div></div><p>Consented photo to come. The natural look, always. Nothing pulled, nothing fake.</p></div>
-      <div class="case"><div class="k">Lower face and jawline</div><h3>Definition without the done look</h3><div class="ba"><div>Before</div><div>After</div></div><p>Consented photo to come.</p></div>
-      <div class="case"><div class="k">Neck</div><h3>The neck that tells the truth</h3><div class="ba"><div>Before</div><div>After</div></div><p>Consented photo to come. Usually alongside the skin restoration work, not instead of it.</p></div>
+      <div class="case"><div class="k">Around the eyes</div><h3>Tired eyes, softened</h3><div class="ba"><div><img src="assets/ba/eyes-before.jpg" alt="Generated placeholder image, before"><span>Before</span></div><div><img src="assets/ba/eyes-after.jpg" alt="Generated placeholder image, after"><span>After</span></div></div><p>Placeholder image. Captioned by concern, with the treatment named only in your consultation.</p></div>
+      <div class="case"><div class="k">Lips and mouth area</div><h3>Lines around the mouth</h3><div class="ba"><div><img src="assets/ba/mouth-before.jpg" alt="Generated placeholder image, before"><span>Before</span></div><div><img src="assets/ba/mouth-after.jpg" alt="Generated placeholder image, after"><span>After</span></div></div><p>Placeholder image. The natural look, always. Nothing pulled, nothing fake.</p></div>
+      <div class="case"><div class="k">Lower face and jawline</div><h3>Definition without the done look</h3><div class="ba"><div><img src="assets/ba/jawline-before.jpg" alt="Generated placeholder image, before"><span>Before</span></div><div><img src="assets/ba/jawline-after.jpg" alt="Generated placeholder image, after"><span>After</span></div></div><p>Placeholder image.</p></div>
+      <div class="case"><div class="k">Neck</div><h3>The neck that tells the truth</h3><div class="ba"><div><img src="assets/ba/neck-before.jpg" alt="Generated placeholder image, before"><span>Before</span></div><div><img src="assets/ba/neck-after.jpg" alt="Generated placeholder image, after"><span>After</span></div></div><p>Placeholder image. Usually alongside the skin restoration work, not instead of it.</p></div>
     </div>
     <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="book.html">Book a consultation with Jasna</a><a class="btn ghost" href="assessment.html">Tell me about your skin</a></div>
   </div>
