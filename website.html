@@ -30,6 +30,8 @@ nav .cta{background:var(--taupe);color:var(--cream);padding:11px 20px}
 @media (max-width:860px){nav ul{display:none}}
 header.hero{position:relative;background:var(--taupe);color:var(--cream);overflow:hidden}
 header.hero .bg{position:absolute;inset:0;background:url('assets/hero-laser.jpg') center 30%/cover no-repeat;opacity:.55;filter:sepia(.35) saturate(.7)}
+header.hero video.bg{width:100%;height:100%;object-fit:cover;object-position:center 30%;background:none}
+@media (prefers-reduced-motion:reduce){header.hero video.bg{display:none}}
 header.hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(84,66,58,.96) 0%,rgba(84,66,58,.75) 55%,rgba(84,66,58,.35) 100%)}
 header.hero .wrap{position:relative;z-index:2;padding:90px 28px 90px;max-width:1180px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 @media (max-width:900px){header.hero .wrap{grid-template-columns:1fr;gap:40px}}
@@ -158,7 +160,9 @@ section.dark .paras p{color:rgba(244,241,236,.85)}
 </nav>
 
 <header class="hero" id="top">
-  <div class="bg"></div><div class="scrim"></div>
+  <div class="bg"></div>
+  <video class="bg" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+  <div class="scrim"></div>
   <div class="wrap">
     <div>
     <img class="mono" src="assets/logo-primary-white.png" alt="Jasna Skin Results">
