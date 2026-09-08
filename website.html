@@ -113,6 +113,39 @@ footer h4{font-family:'Cinzel',serif;font-weight:400;font-size:13px;letter-spaci
 footer a{color:rgba(244,241,236,.85);text-decoration:none}
 footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding-top:22px;font-size:11px;letter-spacing:.06em;color:rgba(244,241,236,.55)}
 .demo-note{position:fixed;bottom:14px;right:14px;background:#0A2A28;color:#00D4BC;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:8px 12px;z-index:20;font-family:'Montserrat',sans-serif}
+
+nav ul li{position:relative}
+nav ul li.dd:hover .menu{display:block}
+nav .menu{display:none;position:absolute;top:100%;left:-16px;background:var(--cream);border:1px solid var(--cream-2);min-width:230px;padding:10px 0;z-index:20}
+nav .menu a{display:block;padding:10px 18px;letter-spacing:.14em;font-size:10.5px}
+nav .menu a:hover{background:var(--cream-2)}
+header.hero.sub .wrap{grid-template-columns:1fr 1fr;padding:80px 28px}
+header.hero.sub h1{max-width:16ch}
+header.hero.sub .photo{aspect-ratio:4/3;border-color:rgba(244,241,236,.25);box-shadow:0 30px 70px rgba(43,35,32,.35)}
+.paras p{font-size:16.5px;max-width:64ch;color:#4A3F39;margin-bottom:18px}
+section.dark .paras p{color:rgba(244,241,236,.85)}
+.close{background:var(--taupe-deep);color:var(--cream);text-align:center}
+.close h2{color:var(--cream);margin:0 auto 12px;max-width:none}
+.close p{color:rgba(244,241,236,.8);max-width:56ch;margin:0 auto 30px;font-size:16px}
+.close .btn{background:var(--cream);color:var(--taupe);margin:6px}
+.close .btn.ghost{background:transparent;color:var(--cream);border-color:rgba(244,241,236,.6)}
+.tie{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media (max-width:860px){.tie{grid-template-columns:1fr}}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+@media (max-width:860px){.products{grid-template-columns:1fr 1fr}}
+.products figure{background:rgba(244,241,236,.06);border:1px solid rgba(244,241,236,.18);padding:0 0 16px;text-align:center}
+.products img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.products figcaption{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);padding:14px 10px 2px}
+.products small{display:block;font-size:11px;color:rgba(244,241,236,.6);letter-spacing:.08em}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+@media (max-width:860px){.strip{grid-template-columns:1fr}}
+.strip figure{position:relative}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:sepia(.25) saturate(.8);border:1px solid var(--cream-2)}
+.strip figcaption{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--greige);margin-top:10px}
+.private{background:var(--white);border:1px solid var(--cream-2);padding:40px;margin-top:40px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+@media (max-width:860px){.private{grid-template-columns:1fr}}
+.private h3{font-size:20px;color:var(--taupe);margin-bottom:10px}
+.private p{font-size:15px;color:#4A3F39}
 </style>
 </head>
 <body>
@@ -120,7 +153,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding
 <nav>
   <div class="wrap">
     <a class="logo" href="#top"><img src="assets/monogram-on-taupe.png" alt="Jasna Skin Results monogram" style="border-radius:50%"><span>JASNA</span></a>
-    <ul><li><a href="#start">Start here</a></li><li><a href="#concerns">Skin concerns</a></li><li><a href="#plan">Your plan</a></li><li><a href="#skincare">Your skincare</a></li><li><a href="#jasna">Jasna</a></li><li><a class="cta" href="#consult">Book a consultation</a></li></ul>
+    <ul><li><a href="#start">Start here</a></li><li class="dd"><a href="#concerns">Skin concerns</a><div class="menu"><a href="concern-pigmentation.html">Pigmentation</a><a href="concern-mature-skin.html">Mature skin</a><a href="concern-skin-restoration.html">Skin restoration</a><a href="#concerns">All concerns</a></div></li><li><a href="#plan">Your plan</a></li><li><a href="#skincare">Your skincare</a></li><li><a href="#jasna">Jasna</a></li><li><a class="cta" href="book.html">Book a consultation</a></li></ul>
   </div>
 </nav>
 
@@ -168,12 +201,12 @@ footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding
     <h2>Skin concerns, not treatment menus.</h2>
     <p class="lead">Every one of these starts the same way: a proper consultation. The technology is decided after I have seen your skin, never before.</p>
     <div class="grid3">
-      <a class="concern" href="#consult"><div class="n">01</div><h3>Pigmentation</h3><p>You have spent years trying to fix it. So why does it keep coming back? We find out what is driving it before we treat it.</p></a>
-      <a class="concern" href="#consult"><div class="n">02</div><h3>Mature skin</h3><p>Texture, uneven colour, lines, general changes. Not one little facial. A plan for skin that has lived a life.</p></a>
-      <a class="concern" href="#consult"><div class="n">03</div><h3>Skin restoration</h3><p>Sun damage and years of guessing. A staged journey across face and neck, with the right technologies in the right order.</p></a>
-      <a class="concern" href="#consult"><div class="n">04</div><h3>Texture and scarring</h3><p>Acne scarring, rough texture, enlarged pores. Treated with patience and the right combination, not a single session promise.</p></a>
-      <a class="concern" href="#consult"><div class="n">05</div><h3>Acne</h3><p>Adult breakouts that skincare alone has not shifted. We look at the skin, the routine and what is going on underneath.</p></a>
-      <a class="concern" href="#consult"><div class="n">06</div><h3>Laser, with 26 years behind it</h3><p>Multiple laser technologies in one room, chosen for your skin. Advertised as experience, not as a machine.</p></a>
+      <a class="concern" href="concern-pigmentation.html"><div class="n">01</div><h3>Pigmentation</h3><p>You have spent years trying to fix it. So why does it keep coming back? We find out what is driving it before we treat it.</p></a>
+      <a class="concern" href="concern-mature-skin.html"><div class="n">02</div><h3>Mature skin</h3><p>Texture, uneven colour, lines, general changes. Not one little facial. A plan for skin that has lived a life.</p></a>
+      <a class="concern" href="concern-skin-restoration.html"><div class="n">03</div><h3>Skin restoration</h3><p>Sun damage and years of guessing. A staged journey across face and neck, with the right technologies in the right order.</p></a>
+      <a class="concern" href="concern-skin-restoration.html"><div class="n">04</div><h3>Texture and scarring</h3><p>Acne scarring, rough texture, enlarged pores. Treated with patience and the right combination, not a single session promise.</p></a>
+      <a class="concern" href="book.html"><div class="n">05</div><h3>Acne</h3><p>Adult breakouts that skincare alone has not shifted. We look at the skin, the routine and what is going on underneath.</p></a>
+      <a class="concern" href="concern-skin-restoration.html"><div class="n">06</div><h3>Laser, with 26 years behind it</h3><p>Multiple laser technologies in one room, chosen for your skin. Advertised as experience, not as a machine.</p></a>
     </div>
   </div>
 </section>
@@ -223,7 +256,13 @@ footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding
     <div class="eyebrow" style="color:rgba(244,241,236,.6)">Jasna Skin</div>
     <h2>Your skincare. Not "shop skincare".</h2>
     <p class="lead">Because of the nature of the skincare I use, my range is offered to clients only, through your client account. It starts with a skin assessment, then a consultation where I build your routine. From there your products live in your own account, reordering takes a minute, and wherever I am in the world, your skincare keeps arriving.</p>
-    <img class="photo" src="assets/skincare-flatlay.jpg" alt="Prescribed skincare" style="aspect-ratio:21/9;margin:34px 0 0;border-color:rgba(244,241,236,.2)">
+    <div class="products">
+      <figure><img src="assets/products/cleanse.jpg" alt="Jasna Skin Cleanse"><figcaption>Cleanse</figcaption><small>Morning and night</small></figure>
+      <figure><img src="assets/products/serum.jpg" alt="Jasna Skin Restore Serum"><figcaption>Restore Serum</figcaption><small>Prescribed to your skin</small></figure>
+      <figure><img src="assets/products/cream.jpg" alt="Jasna Skin Repair Cream"><figcaption>Repair Cream</figcaption><small>Night</small></figure>
+      <figure><img src="assets/products/defence.jpg" alt="Jasna Skin Daily Defence"><figcaption>Daily Defence</figcaption><small>Every day, even in the shade</small></figure>
+    </div>
+    <p style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,236,.6);margin-top:14px">Available in your client account after your consultation</p>
     <div class="rx">
       <div><div class="k">1</div><p>Skin assessment, online</p></div>
       <div><div class="k">2</div><p>Jasna reads it</p></div>
@@ -233,7 +272,24 @@ footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding
       <div><div class="k">6</div><p>Easy reorder, auto-replenish</p></div>
       <div><div class="k">7</div><p>Skin review</p></div>
     </div>
-    <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="#consult" style="background:var(--cream);color:var(--taupe)">Start with a consultation</a><a class="btn ghost" href="#" style="color:var(--cream);border-color:rgba(244,241,236,.5)">Existing client login</a></div>
+    <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="book.html" style="background:var(--cream);color:var(--taupe)">Book a consultation with Jasna</a><a class="btn ghost" href="#" style="color:var(--cream);border-color:rgba(244,241,236,.5)">Existing client login</a></div>
+  </div>
+</section>
+
+<section class="alt" id="results">
+  <div class="wrap">
+    <div class="eyebrow">Before and after</div>
+    <h2>Real skin, real time.</h2>
+    <p class="lead">I have a million photos. In the consultation I show you before and afters from my own clients, skin like yours, so you know what a realistic journey looks like. Here is the treatment room. The results are a conversation.</p>
+    <div class="strip">
+      <figure><img src="assets/laser-face.jpg" alt="Laser treatment photography"><figcaption>Treatment photography &middot; laser</figcaption></figure>
+      <figure><img src="assets/needling.jpg" alt="Skin needling treatment photography"><figcaption>Treatment photography &middot; skin needling</figcaption></figure>
+      <figure><img src="assets/laser-treatment.jpg" alt="The treatment room"><figcaption>Treatment photography &middot; the room</figcaption></figure>
+    </div>
+    <div class="private">
+      <div><h3>Cosmetic medicine, shown privately after your consultation.</h3><p>Some results I can only show you in the room, in line with Australian advertising rules. If we have already met, enter the code from your consultation to see them.</p></div>
+      <div style="text-align:right"><a class="btn ghost" href="injectables.html">Enter your code</a></div>
+    </div>
   </div>
 </section>
 
@@ -269,6 +325,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding
       <button class="btn" type="submit">Send to Jasna</button>
     </form>
     <p class="finance">Consultations are held at the clinic in Brisbane. Booking details are confirmed by text once Jasna has read your note.</p>
+    <p style="margin-top:22px"><a class="btn ghost" href="book.html">Or book a consultation with Jasna now</a></p>
   </div>
 </section>
 

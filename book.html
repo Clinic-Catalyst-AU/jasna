@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Book a skin consultation with Jasna</title>
+<link rel="icon" type="image/png" href="assets/monogram-on-taupe.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--taupe:#6B5647;--taupe-deep:#54423A;--greige:#A79A8F;--cream:#F4F1EC;--cream-2:#EAE4DC;--ink:#2B2320;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;font-weight:300;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Cinzel',serif;font-weight:400;letter-spacing:.06em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--greige);margin-bottom:18px}
+.btn{display:inline-block;background:var(--taupe);color:var(--cream);padding:16px 34px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:400;transition:background .2s}
+.btn:hover{background:var(--taupe-deep)}
+.btn.ghost{background:transparent;color:var(--taupe);border:1px solid var(--taupe)}
+.btn.ghost:hover{background:var(--taupe);color:var(--cream)}
+nav{position:sticky;top:0;z-index:10;background:rgba(244,241,236,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--cream-2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+nav .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--taupe)}
+nav .logo img{height:44px}
+nav .logo span{font-family:'Cinzel',serif;font-size:15px;letter-spacing:.3em}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe);text-decoration:none}
+nav .cta{background:var(--taupe);color:var(--cream);padding:11px 20px}
+@media (max-width:860px){nav ul{display:none}}
+header.hero{position:relative;background:var(--taupe);color:var(--cream);overflow:hidden}
+header.hero .bg{position:absolute;inset:0;background:url('assets/hero-laser.jpg') center 30%/cover no-repeat;opacity:.55;filter:sepia(.35) saturate(.7)}
+header.hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(84,66,58,.96) 0%,rgba(84,66,58,.75) 55%,rgba(84,66,58,.35) 100%)}
+header.hero .wrap{position:relative;z-index:2;padding:90px 28px 90px;max-width:1180px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media (max-width:900px){header.hero .wrap{grid-template-columns:1fr;gap:40px}}
+.hform{background:rgba(244,241,236,.96);color:var(--ink);padding:34px 32px;border:1px solid rgba(107,86,71,.2);box-shadow:0 30px 70px rgba(43,35,32,.35)}
+.hform .k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--greige);margin-bottom:8px}
+.hform h3{font-family:'Cinzel',serif;font-size:22px;color:var(--taupe);margin-bottom:6px;letter-spacing:.04em}
+.hform p{font-size:13.5px;color:#4A3F39;margin-bottom:18px}
+.hform label{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--greige);margin:10px 0 5px}
+.hform input,.hform select,.hform textarea{width:100%;padding:12px 14px;border:1px solid var(--cream-2);background:var(--white);font-family:'Montserrat',sans-serif;font-size:14px;color:var(--ink)}
+.hform textarea{min-height:76px;resize:vertical}
+.hform .btn{width:100%;text-align:center;margin-top:16px;padding:15px 20px}
+.hform .fine{font-size:11px;color:var(--greige);margin:12px 0 0;line-height:1.5}
+.hform .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.hform .row{grid-template-columns:1fr}}
+header.hero .mono{height:80px;margin-bottom:22px;opacity:.95}
+header.hero h1{font-size:clamp(28px,4vw,48px);line-height:1.2;max-width:14ch;color:var(--cream)}
+header.hero .tag{font-size:clamp(15px,1.6vw,19px);max-width:52ch;margin:26px 0 34px;color:rgba(244,241,236,.88)}
+header.hero .eyebrow{color:rgba(244,241,236,.7)}
+.pillars{display:flex;gap:0;border-top:1px solid rgba(244,241,236,.25);margin-top:40px;max-width:560px}
+.pillars div{flex:1;padding:18px 0 0;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,241,236,.8);border-right:1px solid rgba(244,241,236,.25);text-align:center}
+.pillars div:last-child{border-right:none}
+section{padding:96px 0}
+section.alt{background:var(--cream-2)}
+section.dark{background:var(--taupe);color:var(--cream)}
+section h2{font-size:clamp(24px,3vw,36px);line-height:1.25;margin-bottom:22px;max-width:22ch}
+section.dark h2,section.dark h3{color:var(--cream)}
+.lead{font-size:17px;max-width:60ch;color:#4A3F39}
+section.dark .lead{color:rgba(244,241,236,.85)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:sepia(.25) saturate(.8);border:1px solid var(--cream-2)}
+.photo.tall{aspect-ratio:4/5}
+@media (max-width:860px){.two{grid-template-columns:1fr;gap:36px}}
+.statement{font-family:'Cinzel',serif;font-size:clamp(20px,2.4vw,28px);line-height:1.45;color:var(--taupe);border-left:2px solid var(--greige);padding-left:26px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media (max-width:860px){.grid3{grid-template-columns:1fr}}
+.concern{background:var(--white);padding:36px 30px;border:1px solid var(--cream-2);transition:transform .2s;text-decoration:none;color:inherit;display:block}
+.concern:hover{transform:translateY(-4px)}
+.concern .n{font-size:11px;letter-spacing:.28em;color:var(--greige);margin-bottom:14px}
+.concern h3{font-size:17px;margin-bottom:12px;color:var(--taupe)}
+.concern p{font-size:14.5px;color:#4A3F39}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+.step .n{font-family:'Cinzel',serif;font-size:40px;color:var(--greige);line-height:1;margin-bottom:14px}
+.step h3{font-size:16px;margin-bottom:10px}
+.step p{font-size:15px}
+.plan{background:var(--white);border:1px solid var(--cream-2);padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;margin-top:40px}
+@media (max-width:860px){.plan{grid-template-columns:1fr;padding:30px}}
+.plan ul{list-style:none;margin-top:18px}
+.plan li{padding:10px 0;border-bottom:1px solid var(--cream-2);font-size:15px;display:flex;gap:12px}
+.plan li:before{content:'';width:6px;height:6px;border-radius:50%;background:var(--greige);margin-top:11px;flex:none}
+.plan .side{background:var(--cream);padding:34px;align-self:start}
+.plan .side h3{font-size:15px;margin-bottom:10px;color:var(--taupe)}
+.plan .side p{font-size:14px}
+.rx{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:40px}
+@media (max-width:860px){.rx{grid-template-columns:1fr 1fr}}
+.rx div{background:rgba(244,241,236,.08);border:1px solid rgba(244,241,236,.18);padding:22px 14px;text-align:center}
+.rx .k{font-family:'Cinzel',serif;font-size:22px;color:var(--greige);margin-bottom:8px}
+.rx p{font-size:12px;letter-spacing:.06em;color:rgba(244,241,236,.85)}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.portrait{aspect-ratio:4/5;background:linear-gradient(160deg,var(--greige),var(--taupe));display:flex;align-items:center;justify-content:center;color:rgba(244,241,236,.8);font-size:11px;letter-spacing:.28em;text-transform:uppercase;text-align:center;padding:30px}
+.portrait img{height:120px;opacity:.9;margin-bottom:18px}
+.qa{margin-top:36px;border-top:1px solid var(--cream-2)}
+.qa details{border-bottom:1px solid var(--cream-2)}
+.qa summary{cursor:pointer;list-style:none;padding:20px 0;font-family:'Cinzel',serif;font-size:16px;color:var(--taupe);display:flex;justify-content:space-between;gap:20px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:'+';color:var(--greige)}
+.qa details[open] summary::after{content:'\2013'}
+.qa p{padding:0 0 20px;font-size:15px;max-width:66ch}
+.consult{text-align:center}
+.consult form{max-width:520px;margin:34px auto 0;display:grid;gap:12px;text-align:left}
+.consult label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--greige)}
+.consult input,.consult select,.consult textarea{width:100%;padding:14px 16px;border:1px solid var(--cream-2);background:var(--white);font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink)}
+.consult textarea{min-height:110px}
+.finance{font-size:13px;color:var(--greige);max-width:62ch;margin:26px auto 0}
+footer{background:var(--taupe-deep);color:rgba(244,241,236,.75);padding:60px 0 40px;font-size:13px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+@media (max-width:860px){footer .wrap{grid-template-columns:1fr}}
+footer img{height:70px;margin-bottom:16px}
+footer h4{font-family:'Cinzel',serif;font-weight:400;font-size:13px;letter-spacing:.24em;color:var(--cream);margin-bottom:12px}
+footer a{color:rgba(244,241,236,.85);text-decoration:none}
+footer .fine{grid-column:1/-1;border-top:1px solid rgba(244,241,236,.15);padding-top:22px;font-size:11px;letter-spacing:.06em;color:rgba(244,241,236,.55)}
+.demo-note{position:fixed;bottom:14px;right:14px;background:#0A2A28;color:#00D4BC;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:8px 12px;z-index:20;font-family:'Montserrat',sans-serif}
+
+nav ul li{position:relative}
+nav ul li.dd:hover .menu{display:block}
+nav .menu{display:none;position:absolute;top:100%;left:-16px;background:var(--cream);border:1px solid var(--cream-2);min-width:230px;padding:10px 0;z-index:20}
+nav .menu a{display:block;padding:10px 18px;letter-spacing:.14em;font-size:10.5px}
+nav .menu a:hover{background:var(--cream-2)}
+header.hero.sub .wrap{grid-template-columns:1fr 1fr;padding:80px 28px}
+header.hero.sub h1{max-width:16ch}
+header.hero.sub .photo{aspect-ratio:4/3;border-color:rgba(244,241,236,.25);box-shadow:0 30px 70px rgba(43,35,32,.35)}
+.paras p{font-size:16.5px;max-width:64ch;color:#4A3F39;margin-bottom:18px}
+section.dark .paras p{color:rgba(244,241,236,.85)}
+.close{background:var(--taupe-deep);color:var(--cream);text-align:center}
+.close h2{color:var(--cream);margin:0 auto 12px;max-width:none}
+.close p{color:rgba(244,241,236,.8);max-width:56ch;margin:0 auto 30px;font-size:16px}
+.close .btn{background:var(--cream);color:var(--taupe);margin:6px}
+.close .btn.ghost{background:transparent;color:var(--cream);border-color:rgba(244,241,236,.6)}
+.tie{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media (max-width:860px){.tie{grid-template-columns:1fr}}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+@media (max-width:860px){.products{grid-template-columns:1fr 1fr}}
+.products figure{background:rgba(244,241,236,.06);border:1px solid rgba(244,241,236,.18);padding:0 0 16px;text-align:center}
+.products img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.products figcaption{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);padding:14px 10px 2px}
+.products small{display:block;font-size:11px;color:rgba(244,241,236,.6);letter-spacing:.08em}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+@media (max-width:860px){.strip{grid-template-columns:1fr}}
+.strip figure{position:relative}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:sepia(.25) saturate(.8);border:1px solid var(--cream-2)}
+.strip figcaption{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--greige);margin-top:10px}
+.private{background:var(--white);border:1px solid var(--cream-2);padding:40px;margin-top:40px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+@media (max-width:860px){.private{grid-template-columns:1fr}}
+.private h3{font-size:20px;color:var(--taupe);margin-bottom:10px}
+.private p{font-size:15px;color:#4A3F39}
+</style>
+</head>
+<body>
+<div class="demo-note">Concept by Clinic Catalyst</div>
+
+<style>
+.bk{max-width:1100px;margin:60px auto;padding:0 28px}
+.bk-card{background:var(--white);border:1px solid var(--cream-2);display:grid;grid-template-columns:.9fr 1.2fr .7fr}
+@media (max-width:900px){.bk-card{grid-template-columns:1fr}}
+.bk-left{background:var(--cream-2);padding:40px 34px;border-right:1px solid var(--cream-2)}
+.bk-left img{height:70px;border-radius:50%;margin-bottom:22px}
+.bk-left .svc{font-family:'Cinzel',serif;font-size:20px;color:var(--taupe);margin-bottom:8px;line-height:1.3}
+.bk-left .meta{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--greige);margin:14px 0 18px}
+.bk-left p{font-size:14.5px;color:#4A3F39;margin-bottom:14px}
+.bk-mid{padding:40px 34px}
+.bk-mid h3{font-family:'Cinzel',serif;font-size:16px;color:var(--taupe);display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.bk-mid h3 span{font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:.2em;color:var(--greige)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+.cal .d{font-size:10px;letter-spacing:.2em;color:var(--greige);padding-bottom:8px}
+.cal .n{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:#B9AFA5;border-radius:50%}
+.cal .n.av{color:var(--taupe);background:var(--cream);cursor:pointer;font-weight:500}
+.cal .n.av:hover{background:var(--cream-2)}
+.cal .n.sel{background:var(--taupe);color:var(--cream)}
+.tz{font-size:11px;color:var(--greige);margin-top:18px;letter-spacing:.06em}
+.bk-right{padding:40px 30px;border-left:1px solid var(--cream-2)}
+.bk-right h3{font-family:'Cinzel',serif;font-size:14px;color:var(--taupe);margin-bottom:16px;letter-spacing:.08em}
+.slot{display:block;width:100%;padding:13px 10px;margin-bottom:10px;border:1px solid var(--cream-2);background:var(--white);font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:.1em;color:var(--taupe);cursor:pointer;text-align:center}
+.slot:hover{border-color:var(--taupe)}
+.slot.sel{background:var(--taupe);color:var(--cream);border-color:var(--taupe)}
+.bk-form{background:var(--white);border:1px solid var(--cream-2);border-top:none;padding:40px 34px}
+.bk-form h3{font-family:'Cinzel',serif;font-size:16px;color:var(--taupe);margin-bottom:6px}
+.bk-form .sum{font-size:13px;color:var(--greige);letter-spacing:.06em;margin-bottom:24px}
+.bk-form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:700px){.bk-form .grid{grid-template-columns:1fr}}
+.bk-form label{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--greige);margin:0 0 6px}
+.bk-form input,.bk-form select{width:100%;padding:13px 14px;border:1px solid var(--cream-2);background:var(--cream);font-family:'Montserrat',sans-serif;font-size:14px;color:var(--ink)}
+.bk-form .consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:#4A3F39;margin:20px 0 22px;max-width:70ch}
+.bk-form .consent input{width:auto;margin-top:3px}
+.bk-form .btn{border:none;cursor:pointer;font-family:'Montserrat',sans-serif}
+.bk-form .fine{font-size:12px;color:var(--greige);margin-top:14px;letter-spacing:.04em}
+</style>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="website.html#top"><img src="assets/monogram-on-taupe.png" alt="Jasna Skin Results monogram" style="border-radius:50%"><span>JASNA</span></a>
+    <ul><li><a href="website.html#start">Start here</a></li><li class="dd"><a href="website.html#concerns">Skin concerns</a><div class="menu"><a href="concern-pigmentation.html">Pigmentation</a><a href="concern-mature-skin.html">Mature skin</a><a href="concern-skin-restoration.html">Skin restoration</a><a href="website.html#concerns">All concerns</a></div></li><li><a href="website.html#plan">Your plan</a></li><li><a href="website.html#skincare">Your skincare</a></li><li><a href="website.html#jasna">Jasna</a></li><li><a class="cta" href="book.html">Book a consultation</a></li></ul>
+  </div>
+</nav>
+<div class="bk">
+  <div class="eyebrow" style="text-align:center">Book with Jasna</div>
+  <h2 style="text-align:center;margin:0 auto 36px;max-width:none">One appointment to start with. Your consultation.</h2>
+  <div class="bk-card">
+    <div class="bk-left">
+      <img src="assets/monogram-on-taupe.png" alt="Jasna">
+      <div class="svc">Skin Consultation with Jasna</div>
+      <div class="meta">Complimentary &middot; allow up to two hours</div>
+      <p>This is where it starts. You tell me about your skin, what you have noticed, what you have tried and what you are prepared to do. I look at your face properly, show you before and afters from my own clients, and we build your plan together. No machine is chosen before I have seen your skin.</p>
+      <p>Park Road, Milton, Brisbane. If you are interstate or overseas, the first conversation can happen by phone.</p>
+      <p style="font-size:12.5px;color:var(--greige)">Treatments are booked with me after the consultation, because how long they take depends on your skin.</p>
+    </div>
+    <div class="bk-mid">
+      <h3>September 2026 <span>&lsaquo; &nbsp; &rsaquo;</span></h3>
+      <div class="cal" id="cal">
+        <div class="d">MON</div><div class="d">TUE</div><div class="d">WED</div><div class="d">THU</div><div class="d">FRI</div><div class="d">SAT</div><div class="d">SUN</div>
+        <div class="n"></div><div class="n">1</div><div class="n">2</div><div class="n">3</div><div class="n">4</div><div class="n">5</div><div class="n">6</div>
+        <div class="n">7</div><div class="n">8</div><div class="n">9</div><div class="n av">10</div><div class="n av">11</div><div class="n">12</div><div class="n">13</div>
+        <div class="n">14</div><div class="n av">15</div><div class="n av">16</div><div class="n av sel">17</div><div class="n av">18</div><div class="n">19</div><div class="n">20</div>
+        <div class="n">21</div><div class="n av">22</div><div class="n av">23</div><div class="n av">24</div><div class="n av">25</div><div class="n">26</div><div class="n">27</div>
+        <div class="n">28</div><div class="n av">29</div><div class="n av">30</div><div class="n"></div><div class="n"></div><div class="n"></div><div class="n"></div>
+      </div>
+      <div class="tz">Australia/Brisbane (AEST)</div>
+    </div>
+    <div class="bk-right">
+      <h3 id="daylabel">Thursday 17 September</h3>
+      <button class="slot">9:00 am</button>
+      <button class="slot sel">10:30 am</button>
+      <button class="slot">1:00 pm</button>
+      <button class="slot">2:30 pm</button>
+    </div>
+  </div>
+  <div class="bk-form">
+    <h3>Your details</h3>
+    <div class="sum" id="sum">Skin Consultation with Jasna &middot; Thursday 17 September &middot; 10:30 am</div>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p class=lead>Thank you. Your consultation is requested. You will get a text and an email to confirm.</p>'">
+      <div class="grid">
+        <div><label>First name</label><input type="text" placeholder="Your first name" required></div>
+        <div><label>Mobile</label><input type="tel" placeholder="04.." required></div>
+        <div><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+        <div><label>What is bothering you most about your skin?</label><select><option>Pigmentation that keeps coming back</option><option>Mature skin, lines, texture</option><option>Sun damage, skin restoration</option><option>Scarring or rough texture</option><option>Acne</option><option>Not sure, that is why I am here</option></select></div>
+      </div>
+      <label class="consent"><input type="checkbox" required><span>I am happy to hear from Jasna by text and email about my consultation and my skin. No specials, no sales sequence.</span></label>
+      <button class="btn" type="submit">Confirm my consultation</button>
+      <p class="fine">You will get a text and an email to confirm. If the time needs to move, Jasna will text you herself.</p>
+    </form>
+  </div>
+</div>
+<footer>
+  <div class="wrap">
+    <div><img src="assets/logo-primary-white.png" alt="Jasna Skin Results"><p>Skin and laser treatments for women 50+. Results driven. Skin health. Confidence. You.</p></div>
+    <div><h4>Visit</h4><p>Brisbane, Queensland<br>By appointment<br><a href="tel:+61422346099">0422 346 099</a></p></div>
+    <div><h4>Follow</h4><p><a href="https://www.instagram.com/jasna.dermaltherapist/">Instagram</a><br><a href="#">Facebook</a><br>www.jasnaskinresults.com.au</p></div>
+    <div class="fine">Website concept prepared by Clinic Catalyst for Jasna Skin Results. Individual results vary. Treatment suitability is determined at consultation. &copy; 2026 Jasna Skin Results.</div>
+  </div>
+</footer>
+<script>
+var months='September';
+document.querySelectorAll('.cal .n.av').forEach(function(d){d.addEventListener('click',function(){document.querySelectorAll('.cal .n').forEach(function(x){x.classList.remove('sel')});d.classList.add('sel');var n=parseInt(d.textContent);var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];var dt=new Date(2026,8,n);document.getElementById('daylabel').textContent=names[dt.getDay()]+' '+n+' September';upd()})});
+document.querySelectorAll('.slot').forEach(function(s){s.addEventListener('click',function(){document.querySelectorAll('.slot').forEach(function(x){x.classList.remove('sel')});s.classList.add('sel');upd()})});
+function upd(){var d=document.getElementById('daylabel').textContent;var s=document.querySelector('.slot.sel');document.getElementById('sum').innerHTML='Skin Consultation with Jasna &middot; '+d+' &middot; '+(s?s.textContent:'')}
+</script>
+</body>
+</html>
