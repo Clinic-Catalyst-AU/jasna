@@ -24,9 +24,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 nav .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--taupe)}
 nav .logo img{height:44px}
 nav .logo span{font-family:'Cinzel',serif;font-size:15px;letter-spacing:.3em}
-nav ul{display:flex;gap:30px;list-style:none}
-nav a{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe);text-decoration:none}
-nav .cta{background:var(--taupe);color:var(--cream);padding:11px 20px}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center;white-space:nowrap}
+nav a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);text-decoration:none;white-space:nowrap}
+nav .cta{background:var(--taupe);color:var(--cream);padding:11px 18px;display:inline-block;line-height:1}
+@media (max-width:1120px){nav ul{gap:16px} nav a{letter-spacing:.12em;font-size:10.5px}}
 @media (max-width:860px){nav ul{display:none}}
 header.hero{position:relative;background:var(--taupe);color:var(--cream);overflow:hidden}
 header.hero .bg{position:absolute;inset:0;background:url('assets/hero-laser.jpg') center 30%/cover no-repeat;opacity:.55;filter:sepia(.35) saturate(.7)}
